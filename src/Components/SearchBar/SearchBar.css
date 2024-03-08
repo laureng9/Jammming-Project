@@ -1,0 +1,40 @@
+.body {
+  font-family: "Mitr", sans-serif;
+  font-weight: 400;
+}
+
+.SearchBar {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.SearchBar input {
+  height: 32px;
+  width: 25%;
+  border-radius: 5px 0 0 5px;
+  border: 3px solid #00c2ba;
+  border-right: none;
+  padding: 6px;
+  outline: none;
+  font-family: inherit;
+  font-size: large;
+  background: white;
+}
+
+.SearchButton {
+  width: 60px;
+  height: inherit;
+  border: 3px solid #00c2ba;
+  background: #00c2ba;
+  text-align: center;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 35px;
+}
+
+.SearchButton:hover {
+  background-color: #ff8fcf;
+}

@@ -1,0 +1,85 @@
+body,
+html,
+#root {
+  /* background-image:url(background_photo.jpg); */
+  height: 100%;
+}
+
+html {
+  font-size: 18px;
+}
+
+h1 {
+  margin-top: auto;
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+  font-size: 130px;
+  font-family: "Lacquer", system-ui;
+  letter-spacing: 10px;
+  padding-left: 0.6em;
+}
+
+h1 #highlight {
+  color: #00f7ff;
+  animation-name: slide;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+@keyframes slide {
+  from {
+    color: #00f7ff;
+  }
+  to {
+    color: #f435ab;
+  }
+}
+
+#saying {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-family: "Mitr", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  width: 60%;
+  margin: auto;
+  padding: 0.5em;
+  display: block;
+}
+
+/* h2 {
+  font-family: ;
+  font-size: ;
+} */
+
+/* .App-Header {
+  /* padding-top: 0.67em; */
+/* padding-left: 0.6em; */
+
+.App {
+  height: 100%;
+  padding: 0 15% 10% 15%;
+  background-image: url(background_photo.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: "Mitr", sans-serif;
+  font-weight: 400;
+  color: whitesmoke;
+  /* opacity: 0.5; */
+}
+
+.App-playlist {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* @media only screen and (max-width: ) {
+  .App-playlist {
+    align-items: ;
+    flex-direction: ;
+  }
+} */
