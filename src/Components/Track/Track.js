@@ -18,10 +18,11 @@ function Track() {
         {/* <<input value={}/> */}
         {/* <h3>Track Name</h3> */}
         <ul>
-          <li id="Track-name">Name of song</li>
-          <li>artist</li>
-          <li>year</li>
+          <li className="Track-name">Name of song</li>
+          <li className="Track-details">artist</li>
+          <li className="Track-details">year</li>
         </ul>
+        <hr />
       </div>
       <button className="Track-action">+</button>
       {/*To add / remove song to new playlist + or - */}

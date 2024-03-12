@@ -1,8 +1,13 @@
 body,
 html,
 #root {
-  /* background-image:url(background_photo.jpg); */
   height: 100%;
+  margin: 0;
+  background-image: url(background_photo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 html {
@@ -18,12 +23,15 @@ h1 {
   font-family: "Lacquer", system-ui;
   letter-spacing: 10px;
   padding-left: 0.6em;
+  text-shadow: 6.36px 6.36px black, 9px 0 black, 6.36px -6.36px black,
+    0 -9px black, -6.36px -6.36px black, -9px 0 black, -6.36px 6.36px black,
+    0 9px black;
 }
 
 h1 #highlight {
   color: #00f7ff;
   animation-name: slide;
-  animation-duration: 2s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-play-state: running;
 }
@@ -40,35 +48,39 @@ h1 #highlight {
 #saying {
   text-align: center;
   color: white;
-  font-size: 25px;
-  font-family: "Mitr", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-  width: 60%;
+  font-size: 33px;
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  width: 70%;
   margin: auto;
+  margin-bottom: 20px;
   padding: 0.5em;
   display: block;
+  text-shadow: 0px 0px 5px #000000, 0px 0px 10px #000000, 0px 0px 10px #000000,
+    0px 0px 20px #000000;
 }
 
-/* h2 {
-  font-family: ;
-  font-size: ;
-} */
+.word-Color1,
+.word-Color2 {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: 38px;
+}
 
-/* .App-Header {
-  /* padding-top: 0.67em; */
-/* padding-left: 0.6em; */
+.word-Color1 {
+  color: #f435ab;
+}
+
+.word-Color2 {
+  color: #00f7ff;
+}
 
 .App {
   height: 100%;
   padding: 0 15% 10% 15%;
-  background-image: url(background_photo.jpg);
-  background-size: cover;
-  background-position: center;
   font-family: "Mitr", sans-serif;
   font-weight: 400;
   color: whitesmoke;
-  /* opacity: 0.5; */
 }
 
 .App-playlist {
@@ -77,9 +89,28 @@ h1 #highlight {
   width: 100%;
 }
 
-/* @media only screen and (max-width: ) {
-  .App-playlist {
-    align-items: ;
-    flex-direction: ;
+@media only screen and (max-width: 1020px) {
+  h1 {
+    font-size: 100px;
+    max-width: 100%;
   }
-} */
+
+  .App-playlist {
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 60px;
+    max-width: 100%;
+  }
+
+  .App-playlist {
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}

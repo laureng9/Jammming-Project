@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import Track from "../Track/Track";
+import "./Tracklist.css";
 //this is list of songs appearing in a particular order from a search / a playlist created(user could change the order of the songs as desired??)
 
 function Tracklist() {
