@@ -8,22 +8,18 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* height: 80px;
-  padding: 1rem; */
 }
 
 .Track-info ul {
   margin: 0;
-  padding-bottom: 10px;
+  padding-bottom: 0.556rem;
 }
 
 .Track-name {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  font-size: 25px;
+  margin-top: 0.556rem;
+  margin-bottom: 1.111rem;
+  font-size: 1.389rem;
   text-indent: 1mm;
-  /* text-transform: uppercase; */
-  /* text-shadow: 8px 8px 12px #000000; */
 }
 
 .Track-info li {
@@ -51,7 +47,7 @@ hr {
   height: 50px;
   width: 50px;
   margin: 30px 10px 30px 0;
-  font-size: 30px;
+  font-size: 1.667rem;
   text-align: center;
 }
 
@@ -59,7 +55,7 @@ hr {
   background-color: #03e9f4;
   animation: pulse 1s infinite;
   color: black;
-  font-size: 35px;
+  font-size: 1.944rem;
   font-weight: 600;
 }
 

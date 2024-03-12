@@ -16,12 +16,12 @@ html {
 
 h1 {
   margin-top: auto;
-  margin-bottom: 30px;
+  margin-bottom: 1.667rem;
   text-align: center;
   color: white;
-  font-size: 130px;
+  font-size: 7.222rem;
   font-family: "Lacquer", system-ui;
-  letter-spacing: 10px;
+  letter-spacing: 0.556rem;
   padding-left: 0.6em;
   text-shadow: 6.36px 6.36px black, 9px 0 black, 6.36px -6.36px black,
     0 -9px black, -6.36px -6.36px black, -9px 0 black, -6.36px 6.36px black,
@@ -48,12 +48,12 @@ h1 #highlight {
 #saying {
   text-align: center;
   color: white;
-  font-size: 33px;
+  font-size: 1.833rem;
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   width: 70%;
   margin: auto;
-  margin-bottom: 20px;
+  margin-bottom: 1.111rem;
   padding: 0.5em;
   display: block;
   text-shadow: 0px 0px 5px #000000, 0px 0px 10px #000000, 0px 0px 10px #000000,
@@ -64,7 +64,7 @@ h1 #highlight {
 .word-Color2 {
   text-transform: uppercase;
   text-decoration: underline;
-  font-size: 38px;
+  font-size: 2.111rem;
 }
 
 .word-Color1 {
@@ -91,26 +91,27 @@ h1 #highlight {
 
 @media only screen and (max-width: 1020px) {
   h1 {
-    font-size: 100px;
     max-width: 100%;
   }
 
   .App-playlist {
-    align-items: center;
-    flex-wrap: wrap;
     flex-direction: column;
   }
 }
 
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size: 60px;
+    font-size: 3.889rem;
     max-width: 100%;
   }
 
+  #saying,
+  .word-Color1,
+  .word-Color2 {
+    font-size: 1.222rem;
+  }
+
   .App-playlist {
-    align-items: center;
-    flex-wrap: wrap;
     flex-direction: column;
   }
 }

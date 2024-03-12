@@ -1,10 +1,8 @@
 .SearchResults {
-  /* width: 60%; */
   width: calc(50% - 70px);
-  max-width: 50%;
   height: 650px;
   overflow-y: scroll;
-  margin-top: 50px;
+  margin-top: 2.778rem;
   padding: 0.7rem;
   background-color: rgba(89, 5, 114, 0.7);
   box-shadow: 0px 0px 2px 2px #000000;
@@ -12,27 +10,19 @@
 
 .SearchResults h2 {
   text-align: center;
-  font-size: 50px;
+  font-size: 2.778rem;
   text-shadow: 8px 8px 12px #000000;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 1.111rem;
+  margin-bottom: 1.667rem;
 }
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
 }
 
-@media only screen and (max-width: 1020) {
-  .SearchResults {
-    width: 90%;
-    max-width: 100%;
-    margin: 0 auto 50px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1020px) {
   .SearchResults {
     width: calc(100% - 20px); /*to account for the scrollbar */
-    margin: 0 auto 50px; /* to center & space the elements*/
+    margin: 30px auto 30px; /* to center & space the elements*/
   }
 }

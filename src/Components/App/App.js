@@ -29,6 +29,7 @@ function App() {
           <SearchResults />
           <Playlist />
         </div>
+        <footer></footer>
       </div>
     </>
   );

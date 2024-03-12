@@ -1,7 +1,5 @@
 .Playlist {
-  /* width: 60%; */
   width: calc(50% - 70px);
-  max-width: 50%;
   max-height: 650px;
   display: flex;
   flex-direction: column;
@@ -10,18 +8,18 @@
   padding: 0.7rem;
   background-color: rgba(89, 5, 114, 0.7);
   box-shadow: 0px 0px 2px 2px #000000;
-  margin-top: 50px;
+  margin-top: 2.778rem;
 }
 
 .Playlist input {
   text-align: center;
   font-family: "Mitr", sans-serif;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 2.778rem;
   text-shadow: 8px 8px 12px #000000;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  margin-left: 3px;
+  margin-top: 1.111rem;
+  margin-bottom: 1.667rem;
+  margin-left: 0.167rem;
   width: 98%;
   border: none;
   background-color: transparent;
@@ -40,7 +38,7 @@
 }
 
 .Save-playlist {
-  font-size: 20px;
+  font-size: 1.111rem;
   font-family: "Mitr", sans-serif;
   font-weight: 400;
   width: 10rem;
@@ -68,16 +66,7 @@
   background: transparent;
 }
 
-@media only screen and (max-width: 1020) {
-  .Playlist {
-    width: 90%;
-    /* align-items: center; */
-    max-width: 100%;
-    margin: 0 auto 50px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1020px) {
   .Playlist {
     width: calc(100% - 20px); /*to account for the scrollbar */
     margin: 0 auto 50px; /* to center & space the elements*/
