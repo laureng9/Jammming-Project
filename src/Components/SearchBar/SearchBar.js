@@ -19,7 +19,7 @@ function SearchBar() {
                     // value={searchBarInput} />
                 /* Additional filters with artist, Genere, Year & mood  */}
       <button type="submit" className="SearchButton">
-        <span class="material-symbols-outlined">search</span>
+        <span className="material-symbols-outlined">search</span>
       </button>
     </div>
   );

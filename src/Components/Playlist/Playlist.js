@@ -5,9 +5,16 @@ import "./Playlist.css";
 function Playlist(props) {
   return (
     <div className="Playlist">
-      <input defaultValue={Playlist} placeholder="Playlist" />
+      <input
+        // defaultValue={props.playlistName}
+        placeholder="Playlist Name"
+      />
       {/* <TrackList /> */}
-      <Tracklist tracks={props.tracks} />
+      <Tracklist
+        tracks={props.tracks}
+        removeTrack={props.removeTrack}
+        isRemove={true}
+      />
       <button className="Save-playlist">Save To Spotify</button>
     </div>
   );

@@ -9,7 +9,11 @@ function SearchResults(props) {
       <h2>Results</h2>
       {/* <SearchTrack value={ } onChange={newTrack => set(newTrack)} /> 
              <TrackList tracks={foundTrack} emptyHeading={`No matches for ${}`} />   */}
-      <Tracklist tracks={props.tracks} />
+      <Tracklist
+        tracks={props.tracks}
+        addTrack={props.addTrack}
+        isRemove={false}
+      />
     </div>
   );
 }

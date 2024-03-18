@@ -2,6 +2,14 @@ import React, { useState } from "react";
 import "./Track.css";
 
 function Track(props) {
+  const handleAddTrack = (event) => {
+    props.addTrack(props.track);
+  };
+
+  const handleRemoveTrack = (event) => {
+    props.removeTrack(props.track);
+  };
+
   return (
     <>
       <div className="Track">
@@ -19,8 +27,16 @@ function Track(props) {
           // </ul> */}
           <hr />
         </div>
-        <button className="Track-action">+</button>
-        {/*To add / remove song to new playlist + or - */}
+
+        {props.isRemove ? (
+          <button className="Track-action" onClick={handleRemoveTrack}>
+            -
+          </button>
+        ) : (
+          <button className="Track-action" onClick={handleAddTrack}>
+            +
+          </button>
+        )}
       </div>
     </>
   );

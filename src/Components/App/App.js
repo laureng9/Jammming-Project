@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useCallback } from "react";
 import { useState } from "react";
 import Playlist from "../Playlist/Playlist";
 import SearchBar from "../SearchBar/SearchBar";
@@ -26,8 +26,19 @@ function App() {
       id: 3,
     },
   ]);
-  // const [playlistName, setPlaylistName] = useState('New Playlist');
   const [playlistTracks, setPlaylistTracks] = useState([]);
+  const [playlistName, setPlaylistName] = useState("New Playlist");
+  const addTrack = useCallback(
+    (track) => {
+      setPlaylistTracks((prevTracks) => [...prevTracks, track]);
+    },
+    [playlistTracks]
+  );
+  const removeTrack = useCallback((trackToRemove) => {
+    setPlaylistTracks((prevTracks) =>
+      prevTracks.filter((track) => track.id !== trackToRemove.id)
+    );
+  }, []);
 
   return (
     <>
@@ -45,8 +56,12 @@ function App() {
         </header>
         <SearchBar />
         <div className="App-playlist">
-          <SearchResults tracks={searchResults} />
-          <Playlist tracks={playlistTracks} />
+          <SearchResults tracks={searchResults} addTrack={addTrack} />
+          <Playlist
+            tracks={playlistTracks}
+            playlistName={playlistName}
+            removeTrack={removeTrack}
+          />
         </div>
         <footer></footer>
       </div>
