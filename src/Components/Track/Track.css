@@ -3,34 +3,57 @@
   align-items: center;
 }
 
+/* .Track-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
 .Track-info {
+  /* margin: 0;
+  padding-bottom: 0.556rem; */
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.Track-info ul {
+/* .Track-info ul {
   margin: 0;
   padding-bottom: 0.556rem;
-}
+} */
 
-.Track-name {
+/* .Track-name {
   margin-top: 0.556rem;
   margin-bottom: 1.111rem;
   font-size: 1.389rem;
   text-indent: 1mm;
+} */
+
+h3 {
+  margin-top: 0.556rem;
+  margin-bottom: 1.111rem;
+  font-size: 1.389rem;
+  text-indent: 9mm;
 }
 
-.Track-info li {
+/* .Track-info li {
   list-style: none;
   height: 30px;
   display: flex;
   flex-wrap: wrap;
-}
+} */
 
-.Track-details {
+/* .Track-details {
   text-indent: 3mm;
+} */
+
+p {
+  /* height: 30px; */
+  display: flex;
+  flex-wrap: wrap;
+  text-indent: 12mm;
 }
 
 hr {

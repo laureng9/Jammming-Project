@@ -1,32 +1,28 @@
 import React, { useState } from "react";
 import "./Track.css";
 
-function Track() {
-  // const [trackName, setTrackName] = useState('Track 1');
-  // const [artistName, setArtistName] = useState('Artist');
-  // const [year, setYear] = useState(2023);
-
-  //eventhandler - when name of song is clicked take the user to the artist page where they can listeb to song  or when song is clicked play button  displays on right side & add button is at the bottom of results block??
-
-  // const trackDetails = [setTrackName, setArtistName, setYear]
-
-  // key =
-
+function Track(props) {
   return (
-    <div className="Track">
-      <div className="Track-info">
-        {/* <<input value={}/> */}
-        {/* <h3>Track Name</h3> */}
-        <ul>
-          <li className="Track-name">Name of song</li>
-          <li className="Track-details">artist</li>
-          <li className="Track-details">year</li>
-        </ul>
-        <hr />
+    <>
+      <div className="Track">
+        <div className="Track-info">
+          {/* {tracks.map((track) => { */}
+          <h3>{props.track.name}</h3>
+          <p>{props.track.artist}</p>
+          <p>{props.track.album}</p>
+          {/* tracks.map((tracks) =>{" "}
+          {/* // {trackDetails}
+            /* // <ul key={id}>
+          //   <li className="Track-name">{name}</li>
+          //   <li className="Track-details">{artist}</li>
+          //   <li className="Track-details">{album}</li>
+          // </ul> */}
+          <hr />
+        </div>
+        <button className="Track-action">+</button>
+        {/*To add / remove song to new playlist + or - */}
       </div>
-      <button className="Track-action">+</button>
-      {/*To add / remove song to new playlist + or - */}
-    </div>
+    </>
   );
 }
 

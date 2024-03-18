@@ -6,9 +6,28 @@ import SearchBar from "../SearchBar/SearchBar";
 import SearchResults from "../SearchResults/SearchResults";
 
 function App() {
-  // const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState([
+    {
+      name: "Fire for You",
+      artist: "Cannons",
+      album: "Shadows",
+      id: 1,
+    },
+    {
+      name: "Wine into Whiskey",
+      artist: "Tucker Wetmore",
+      album: "Wine into Whiskey",
+      id: 2,
+    },
+    {
+      name: "Daydreams",
+      artist: "We Three",
+      album: "Happy",
+      id: 3,
+    },
+  ]);
   // const [playlistName, setPlaylistName] = useState('New Playlist');
-  // const [playlistTrack, setPlaylistTrack] = useState([]);
+  const [playlistTracks, setPlaylistTracks] = useState([]);
 
   return (
     <>
@@ -26,8 +45,8 @@ function App() {
         </header>
         <SearchBar />
         <div className="App-playlist">
-          <SearchResults />
-          <Playlist />
+          <SearchResults tracks={searchResults} />
+          <Playlist tracks={playlistTracks} />
         </div>
         <footer></footer>
       </div>
