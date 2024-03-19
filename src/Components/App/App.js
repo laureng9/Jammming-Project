@@ -26,18 +26,22 @@ function App() {
       id: 3,
     },
   ]);
+
   const [playlistTracks, setPlaylistTracks] = useState([]);
-  const [playlistName, setPlaylistName] = useState("New Playlist");
-  const addTrack = useCallback(
-    (track) => {
-      setPlaylistTracks((prevTracks) => [...prevTracks, track]);
-    },
-    [playlistTracks]
-  );
+
+  const addTrack = useCallback((track) => {
+    setPlaylistTracks((prevTracks) => [...prevTracks, track]);
+  }, []);
+
   const removeTrack = useCallback((trackToRemove) => {
     setPlaylistTracks((prevTracks) =>
       prevTracks.filter((track) => track.id !== trackToRemove.id)
     );
+  }, []);
+
+  const [playlistName, setPlaylistName] = useState("");
+  const updatePlaylistName = useCallback((title) => {
+    setPlaylistName(title);
   }, []);
 
   return (
@@ -61,6 +65,7 @@ function App() {
             tracks={playlistTracks}
             playlistName={playlistName}
             removeTrack={removeTrack}
+            updatePlaylistName={updatePlaylistName}
           />
         </div>
         <footer></footer>
