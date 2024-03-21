@@ -4,8 +4,11 @@ import { useState } from "react";
 import Playlist from "../Playlist/Playlist";
 import SearchBar from "../SearchBar/SearchBar";
 import SearchResults from "../SearchResults/SearchResults";
+import Spotify from "../../Utils/Spotify";
 
 function App() {
+  Spotify.getAccessToken();
+
   const [searchResults, setSearchResults] = useState([
     {
       name: "Fire for You",
