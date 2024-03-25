@@ -51,6 +51,13 @@ function App() {
     setPlaylistName(title);
   }, []);
 
+  const savePlaylist = useCallback(() => {
+    const uris = playlistTracks.map((track) => {
+      return track.uri;
+    });
+    Spotify.savePlaylist(playlistName, uris);
+  }, [playlistTracks, playlistName]);
+
   return (
     <>
       <div className="App">
@@ -73,6 +80,7 @@ function App() {
             playlistName={playlistName}
             removeTrack={removeTrack}
             updatePlaylistName={updatePlaylistName}
+            savePlaylist={savePlaylist}
           />
         </div>
         <footer></footer>

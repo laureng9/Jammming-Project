@@ -1,9 +1,6 @@
 .Playlist {
   width: calc(50% - 70px);
   max-height: 650px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   overflow-y: scroll;
   padding: 0.7rem;
   background-color: rgba(89, 5, 114, 0.7);
@@ -44,6 +41,7 @@
   width: 10rem;
   padding: 0.4rem 0;
   margin-top: 1.27rem;
+  margin: auto;
   text-align: center;
   align-self: center;
   cursor: pointer;
@@ -51,6 +49,7 @@
   border: 1.5px solid #03e9f4;
   border-radius: 7px;
   background-color: transparent;
+  display: block;
 }
 
 .Save-playlist:hover {

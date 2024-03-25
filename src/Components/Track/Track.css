@@ -35,7 +35,8 @@ h3 {
   margin-top: 0.556rem;
   margin-bottom: 1.111rem;
   font-size: 1.389rem;
-  text-indent: 9mm;
+  padding-left: 34px;
+  /* text-indent: 9mm; */
 }
 
 /* .Track-info li {
@@ -53,7 +54,8 @@ p {
   /* height: 30px; */
   display: flex;
   flex-wrap: wrap;
-  text-indent: 12mm;
+  /* text-indent: 12mm; */
+  padding-left: 45px;
 }
 
 hr {

@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import Tracklist from "../Tracklist/Tracklist";
 import "./Playlist.css";
 
@@ -7,20 +6,21 @@ function Playlist(props) {
     props.updatePlaylistName(event.target.value);
   };
 
+  const handleClick = (event) => {
+    props.savePlaylist();
+  };
+
   return (
     <div className="Playlist">
-      <input
-        // defaultValue={props.playlistName}
-        placeholder="Playlist Name"
-        onChange={handlePlaylistName}
-      />
-      {/* <TrackList /> */}
+      <input placeholder="Playlist Name" onChange={handlePlaylistName} />
       <Tracklist
         tracks={props.tracks}
         removeTrack={props.removeTrack}
         isRemove={true}
       />
-      <button className="Save-playlist">Save To Spotify</button>
+      <button className="Save-playlist" onClick={handleClick}>
+        Save To Spotify
+      </button>
     </div>
   );
 }

@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./Track.css";
 
 function Track(props) {
