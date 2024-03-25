@@ -1,24 +1,29 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
 
-function SearchBar() {
-  // const [searchBarInput, setSearchBarInput] = useState('Search...');
+function SearchBar(props) {
+  const [searchBarInput, setSearchBarInput] = useState("");
 
   // //event handler
-  // const handleChange = (e) => {
-  //     e.preventDefault();
-  //     setSearchBarInput(e.target.value);
-  // }
+  const handleChange = (event) => {
+    event.preventDefault();
+    setSearchBarInput(event.target.value);
+  };
+
+  const handleClick = (event) => {
+    //Search on spotify
+    props.onSearchSpotify(searchBarInput);
+  };
 
   return (
     <div className="SearchBar">
-      <input type="text" placeholder="Search for Song, Album  or Artist" />
-      {/* Input attributes 
-                    
-                    // onChange={handleChange}
-                    // value={searchBarInput} />
-                /* Additional filters with artist, Genere, Year & mood  */}
-      <button type="submit" className="SearchButton">
+      <input
+        type="text"
+        placeholder="Search for Song, Album  or Artist"
+        onChange={handleChange}
+        value={searchBarInput}
+      />
+      <button type="submit" className="SearchButton" onClick={handleClick}>
         <span className="material-symbols-outlined">search</span>
       </button>
     </div>

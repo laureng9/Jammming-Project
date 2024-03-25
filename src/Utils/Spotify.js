@@ -42,6 +42,35 @@ const Spotify = {
       console.error(error);
     }
   },
+  // term is the text that is being searched for
+  search(term) {
+    const token = this.getAccessToken();
+    const searchUri = `https://api.spotify.com/v1/search?q=${term}&type=track`;
+
+    const results = fetch(searchUri, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error("Spotify search failed!");
+      })
+      .then((jsonResponse) => {
+        const tracks = jsonResponse.tracks.items.map((item) => {
+          return {
+            id: item.id,
+            name: item.name,
+            artist: item.artists[0].name,
+            album: item.album.name,
+          };
+        });
+        return tracks;
+      });
+    return results;
+  },
 };
 
 export default Spotify;

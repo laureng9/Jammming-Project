@@ -7,28 +7,32 @@ import SearchResults from "../SearchResults/SearchResults";
 import Spotify from "../../Utils/Spotify";
 
 function App() {
-  Spotify.getAccessToken();
-
   const [searchResults, setSearchResults] = useState([
-    {
-      name: "Fire for You",
-      artist: "Cannons",
-      album: "Shadows",
-      id: 1,
-    },
-    {
-      name: "Wine into Whiskey",
-      artist: "Tucker Wetmore",
-      album: "Wine into Whiskey",
-      id: 2,
-    },
-    {
-      name: "Daydreams",
-      artist: "We Three",
-      album: "Happy",
-      id: 3,
-    },
+    // {
+    //   name: "Fire for You",
+    //   artist: "Cannons",
+    //   album: "Shadows",
+    //   id: 1,
+    // },
+    // {
+    //   name: "Wine into Whiskey",
+    //   artist: "Tucker Wetmore",
+    //   album: "Wine into Whiskey",
+    //   id: 2,
+    // },
+    // {
+    //   name: "Daydreams",
+    //   artist: "We Three",
+    //   album: "Happy",
+    //   id: 3,
+    // },
   ]);
+
+  const searchSpotify = useCallback((searchTerm) => {
+    Spotify.search(searchTerm).then((tracks) => {
+      setSearchResults(tracks);
+    });
+  }, []);
 
   const [playlistTracks, setPlaylistTracks] = useState([]);
 
@@ -61,7 +65,7 @@ function App() {
             {/* It's time to DJ your mood & let the good vibes roll */}
           </section>
         </header>
-        <SearchBar />
+        <SearchBar onSearchSpotify={searchSpotify} />
         <div className="App-playlist">
           <SearchResults tracks={searchResults} addTrack={addTrack} />
           <Playlist
