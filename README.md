@@ -2,6 +2,8 @@
 
 This project is a React Web Application
 
+[Live version of site](https://jammming-spotifyplaylist-project.netlify.app/)
+
 ## Table of Contents
 
 1. [The Purpose](#the-purpose)
