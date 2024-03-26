@@ -69,7 +69,6 @@ function App() {
             Crafting a <span className="word-Color1">playlist</span> is like
             curating your own <span className="word-Color2">musical</span>{" "}
             adventure.
-            {/* It's time to DJ your mood & let the good vibes roll */}
           </section>
         </header>
         <SearchBar onSearchSpotify={searchSpotify} />

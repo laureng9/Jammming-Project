@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React from "react";
 import Track from "../Track/Track";
 import "./Tracklist.css";
 
@@ -17,7 +16,6 @@ function Tracklist(props) {
           />
         );
       })}
-      {/* <Track key={track.id} track={track} /> */}
     </div>
   );
 }

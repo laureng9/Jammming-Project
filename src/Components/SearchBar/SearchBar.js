@@ -10,7 +10,7 @@ function SearchBar(props) {
     setSearchBarInput(event.target.value);
   };
 
-  const handleClick = (event) => {
+  const handleClick = () => {
     //Search on spotify
     props.onSearchSpotify(searchBarInput);
   };
@@ -31,4 +31,3 @@ function SearchBar(props) {
 }
 
 export default SearchBar;
-// https://www.emgoto.com/react-search-bar/

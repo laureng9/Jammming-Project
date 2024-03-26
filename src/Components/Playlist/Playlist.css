@@ -40,8 +40,7 @@
   font-weight: 400;
   width: 10rem;
   padding: 0.4rem 0;
-  margin-top: 1.27rem;
-  margin: auto;
+  margin: 1.27rem 11.5rem;
   text-align: center;
   align-self: center;
   cursor: pointer;
@@ -69,5 +68,9 @@
   .Playlist {
     width: calc(100% - 20px); /*to account for the scrollbar */
     margin: 0 auto 50px; /* to center & space the elements*/
+  }
+
+  .Save-playlist {
+    margin: 1.27rem auto; /* center the Save-playlist button horizontally */
   }
 }

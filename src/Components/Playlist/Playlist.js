@@ -1,3 +1,4 @@
+import React from "react";
 import Tracklist from "../Tracklist/Tracklist";
 import "./Playlist.css";
 
@@ -6,7 +7,7 @@ function Playlist(props) {
     props.updatePlaylistName(event.target.value);
   };
 
-  const handleClick = (event) => {
+  const handleClick = () => {
     props.savePlaylist();
   };
 
