@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# JAMMMING
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React Web Application
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+1. [The Purpose](#the-purpose)
+2. [Technologies Used](#technologies-used)
+3. [Features](#features)
+4. [Display](#display)
+5. [Future Work](#future-work)
+6. [Testing](#testing)
 
-### `npm start`
+## The Purpose
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The purpose of this project was to demonstrate knowledge of React components, passing state and requests with the Spotify API to build a website which will allow users to search the Spotify library, create a custom playlist and save it to their personal Spotify account.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- HTML
+- CSS
+- JavaScript
+- React
+- HTTP Request and Response
+- Authentication
+- Spotify API
+- Git
+- Netlify
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- Users can search for songs
+- Users can see information about each song, like title, artist and album
+- Users can export their custom playlist to their personal Spotify account
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Display
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Jammming Website Preview**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Jammming Website Snapshot](images\App_Display.png)
 
-### `npm run eject`
+- [Source of background image used for Jammming Website](https://hdqwalls.com/wallpaper/1440x900/mask-boy-listening-music-neon-4k)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Future Work
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Add album cover to songs
+- Display year of song/ album
+- Filter search by year / genre
+- Play preview button for each track will allow users to hear selected song of choice
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Testing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Manual testing used for the below test cases.
 
-## Learn More
+**Icons used to state outcome of test cases**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- ✅ - Passed Test
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Test Case 1: Verify search bar input accepts text and button fetches data from Spotify
 
-### Code Splitting
+**Expected Results**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Typed text displays in search bar. ✅
+- Search icon fetches data typed in search bar from Spotify when clicked. ✅
 
-### Analyzing the Bundle Size
+### Test Case 2: Verify tracks display in search results
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Expected Results**
 
-### Making a Progressive Web App
+- When search button is clicked in search bar, the data fetched displays in search results relating to text typed in the search bar. ✅
+- Information displayed for each track shows title of song, artist and album. ✅
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Test Case 3: Verify adding track to custom playlist
 
-### Advanced Configuration
+**Expected Results**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Clicking the + button in search results adds a new track to custom playlist. ✅
+- Able to add numerous tracks to custom playlist. ✅
 
-### Deployment
+### Test Case 4: Verify removing track from custom playlist
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**Expected Results**
 
-### `npm run build` fails to minify
+- Clicking the - button on custom playlist removes track. ✅
+- Able to remove numerous tracks until there are no more tracks in custom playlist.✅
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Test Case 5: Verify scroll bar on App-playlists is enabled to display more tracks to users
+
+**Expected Results**
+
+- When numerous tracks display in Search Results or Custom Playlist, a hidden scrollbar on the right side of Search Results & Custom Playlist is used to view more tracks. ✅
+
+### Test Case 6: Verify custom playlist name is editable
+
+**Expected Results**
+
+- When playlist name is clicked, it is edited by typing text to create new name for custom playlist. ✅
+- New name of custom playlist saves, and it uploaded to Spotify when 'Save to Spotify' button is clicked.✅
+
+### Test Case 7: Verify 'Save to Spotify' button saves custom playlist
+
+**Expected Results**
+
+- Clicking the 'Save to Spotify' button saves custom playlist to personal Spotify Account. ✅
+- Alert pops up on screen to say custom playlist was successfully saved. ✅
+
+**Condition**
+
+- Custom Playlist will not save to Spotify if playlist has not been given a name. An alert will pop up informing user that playlist was not saved.
