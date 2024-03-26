@@ -82,7 +82,6 @@ function App() {
             savePlaylist={savePlaylist}
           />
         </div>
-        <footer></footer>
       </div>
     </>
   );
